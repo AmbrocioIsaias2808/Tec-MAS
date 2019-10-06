@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/navmenu_inicio"
+            android:icon="@drawable/ic_menu_inicio"
+            android:title="Inicio"/>
+
+        <item android:id="@+id/navmenu_becas"
+            android:icon="@drawable/ic_menu_becas"
+            android:title="Becas"/>
+
+        <item android:id="@+id/navmenu_calendario"
+            android:icon="@drawable/ic_menu_calendario"
+            android:title="Calendario"/>
+
+        <item android:id="@+id/navmenu_transporte"
+            android:icon="@drawable/ic_menu_transporte"
+            android:title="Transporte"/>
+
+        <item android:id="@+id/navmenu_emergencias"
+            android:icon="@drawable/ic_menu_emergencias"
+            android:title="Emergencias"/>
+
+        <item android:id="@+id/navmenu_mapainteractivo"
+            android:icon="@drawable/ic_menu_mapainteractivo"
+            android:title="Mapa Interactivo"/>
+    </group>
+</menu>
