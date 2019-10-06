@@ -1,4 +1,5 @@
 package com.example.tecmas;
+import com.Prueba1.Image_target.UnityPlayerActivity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -8,6 +9,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.onesignal.OneSignal;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -38,8 +41,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        drawer= findViewById(R.id.drawer_layout);
-        NavigationView navigationView= findViewById(R.id.nav_view);
+        drawer= findViewById(R.id.menu_drawer_layout);
+        NavigationView navigationView= findViewById(R.id.barramenu_view);
         navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle); toggle.syncState();
@@ -70,7 +73,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Fragmenttransporte()).commit();
                 break;
             case R.id.navmenu_mapainteractivo:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMapaInteractivo()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMapaInteractivo()).commit();
+                Intent intent = new Intent(this, UnityPlayerActivity.class);
+                startActivity(intent);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

@@ -21,7 +21,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.tecmas"
-        minSdkVersion 15
+        minSdkVersion 16 //Original: 15 moved to 16 for compatibility with Unity library
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -45,6 +45,9 @@ android {
 }
 
 dependencies {
+    //Begin: Unity Integration
+    implementation project(":Image_Target-debug")
+    //End: Unity Integration
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':Image_Target-debug'
 rootProject.name='TecMAS'
