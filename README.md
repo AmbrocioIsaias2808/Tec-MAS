@@ -24,6 +24,18 @@ En la presente versión se ha tratado de embeber el desarrollo de el aplicativo 
 		* En un principio crasheaba y se cerraba, recompilamos el proyecto y reiniciamos android studio, una vez hecho esto intentamos nuevamente, el resultado fue que ahora no se cerraba la aplicación y abría el proyecto en unity, sin embargo:
 		* Lo único que muestra es un fondo con degradado y hasta allí.
 
+
+
+**Nota personal: ** desconozco si es error vuestro o problemas con el código, el proceso de pruebas inicio a las 10:00am y termino a las 5:00pm del día que marca la rama de versión, por hoy dejaré el proyecto, checaremos después.
+
+**Capturas: **
+
+<img src="READMEFILES/Screenshot_20191006-170609.png" alt="Screenshot_20191006-170609" style="zoom:50%;" />
+
+
+
+<img src="READMEFILES/Screenshot_20191006-170619.png" alt="Screenshot_20191006-170619" style="zoom: 33%;" />
+
 Fuentes consultadas por el momento:
 
 **Para el proceso de integración:**
