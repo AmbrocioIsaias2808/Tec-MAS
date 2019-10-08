@@ -7,6 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.tecmas.InfoCards.InfoObjects;
+import com.example.tecmas.InfoCards.RecyclerAdapter;
 import com.onesignal.OneSignal;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -20,6 +25,8 @@ import com.example.tecmas.Menu.FragmentMapaInteractivo;
 import com.example.tecmas.Menu.Fragmenttransporte;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //Begin: OneSginal Code
         OneSignal.startInit(this)
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
