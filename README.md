@@ -17,6 +17,8 @@ Tec-MAS esta pensado para ser una aplicación móvil que conecte con varios serv
 
 La presente versión es solamente una plantilla de propuesta para la interfaz de usuario con un catálogo de funciones iniciales. Esta versión ya incorpora un sistema de notificaciones gestionado por el servicio de OneSignal.
 
+Además esta versión incluye además un borrador correspondiente al diseño del modo de despliegue de información en las pantallas principales de navegación.
+
 **Capturas de Pantalla:**
 
 <img src="READMEFILES/CapturasDeVersion1.png" alt="CapturasDeVersion1" style="zoom:25%;" />
@@ -25,9 +27,9 @@ La presente versión es solamente una plantilla de propuesta para la interfaz de
 
 <img src="READMEFILES/CapturasDeVersion3.png" alt="CapturasDeVersion3" style="zoom:25%;" />
 
-<img src="READMEFILES/CapturasDeVersion2.png" alt="CapturasDeVersion2" style="zoom:25%;" />
 
 
+<img src="READMEFILES/Screenshot_20191008-161743.png" alt="Screenshot_20191008-161743" style="zoom:25%;" />
 
 -------
 
