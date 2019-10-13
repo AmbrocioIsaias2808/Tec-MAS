@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':apersonalizedlibrary'
 rootProject.name='TecMAS'

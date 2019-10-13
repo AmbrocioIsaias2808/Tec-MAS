@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.apersonalizedlibrary.TextJustification;
 import com.example.tecmas.R;
 
 import java.util.Collections;
@@ -20,14 +21,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     public static class View_Holder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView title;
-        TextView description;
+       // TextView description;
         ImageView imageView;
 
         View_Holder(View itemView) {
             super(itemView);
             cv = (CardView) itemView.findViewById(R.id.cardView);
             title = (TextView) itemView.findViewById(R.id.title);
-            description = (TextView) itemView.findViewById(R.id.description);
+           // description = (TextView) itemView.findViewById(R.id.description);
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
         }
     }
@@ -56,8 +57,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
         holder.title.setText(list.get(position).title);
-        holder.description.setText(list.get(position).description);
-        holder.imageView.setImageResource(list.get(position).imageId);
+        TextJustification.justify(holder.title); //para justificar el texto
+       // holder.description.setText(list.get(position).description);
+        holder.imageView.setBackgroundResource(list.get(position).imageId);
+
 
         //animate(holder);
 
