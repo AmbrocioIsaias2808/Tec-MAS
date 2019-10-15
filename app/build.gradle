@@ -1,7 +1,7 @@
 //Begin: OneSignal setup
 buildscript {
     repositories {
-        maven { url 'https://plugins.gradle.org/m2/'}
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
         classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]'
@@ -30,7 +30,7 @@ android {
         //Begin: OneSignal manifestPlaceHolders
 
         manifestPlaceholders = [
-                onesignal_app_id: 'b43ebbab-e2b2-4b03-8496-0e054bac7c31',
+                onesignal_app_id               : 'b43ebbab-e2b2-4b03-8496-0e054bac7c31',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]
@@ -53,12 +53,13 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'
     //End: Agregados
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //Begin: OneSignal Dependencies
     implementation 'com.onesignal:OneSignal:[3.11.2, 3.99.99]'
-    implements project(path: ':apersonalizedlibrary')
+    implementation project(path: ':apersonalizedlibrary')
     //End: OneSignal Dependencies
 
 

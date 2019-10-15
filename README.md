@@ -15,21 +15,22 @@ Tec-MAS esta pensado para ser una aplicación móvil que conecte con varios serv
 
 ### Notas de Versión:
 
-La presente versión es solamente una plantilla de propuesta para la interfaz de usuario con un catálogo de funciones iniciales. Esta versión ya incorpora un sistema de notificaciones gestionado por el servicio de OneSignal.
+La presente versión incorpora el boceto de lo que será el apartado de transporte, donde se presentarán los mapas y horarios correspondientes a las rutas de transporte nocturno.
 
-Además esta versión incluye además un borrador correspondiente al diseño del modo de despliegue de información en las pantallas principales de navegación.
+##### Notas del desarrollador y cosas por hacer:
+
+* La presente interfaz tiene un cierto retrase o lagueo en el desplazamiento entre pestañas, probablemente debido o a la carga de los mapas y/o de la forma de creación de los objetos que le dan origen. En resumen es un aspecto a resolver.
+
+* Necesitamos pensar en la forma de interactuar con el mapa, ya sea:
+
+	* Colocando un mapa de google maps y mandarlo llamar desde una instancia externa.
+	* Dejar el formato de imagen pero agregar la interctividad de poder dar click, zoom y demas.
 
 **Capturas de Pantalla:**
 
-<img src="READMEFILES/CapturasDeVersion1.png" alt="CapturasDeVersion1" style="zoom:25%;" />
 
 
-
-<img src="READMEFILES/CapturasDeVersion3.png" alt="CapturasDeVersion3" style="zoom:25%;" />
-
-
-
-<img src="READMEFILES/Screenshot_20191008-161743.png" alt="Screenshot_20191008-161743" style="zoom:25%;" />
+<img src="READMEFILES/Screenshot_20191015-165954.png" alt="Screenshot_20191015-165954" style="width:25%;" />
 
 -------
 

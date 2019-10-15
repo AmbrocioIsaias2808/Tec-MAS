@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    >
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
         android:layout_height="wrap_content"
-        android:text="Pantalla de Transporte"
-        android:textSize="30dp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"/>
+        android:layout_width="match_parent">
 
 
-</RelativeLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:id="@+id/tabs">
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/appbar"
+        android:id="@+id/viewPagerTransporte"
+        app:layout_anchorGravity="center" >
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

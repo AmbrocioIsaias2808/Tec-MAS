@@ -1,20 +1,14 @@
 package com.example.tecmas;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tecmas.InfoCards.InfoObjects;
-import com.example.tecmas.InfoCards.RecyclerAdapter;
 import com.onesignal.OneSignal;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 
 import com.example.tecmas.Menu.FragmentBecas;
@@ -22,10 +16,8 @@ import com.example.tecmas.Menu.FragmentCalendario;
 import com.example.tecmas.Menu.FragmentEmergencias;
 import com.example.tecmas.Menu.FragmentInicio;
 import com.example.tecmas.Menu.FragmentMapaInteractivo;
-import com.example.tecmas.Menu.Fragmenttransporte;
+import com.example.tecmas.Menu.Seccion_Transporte.Fragmenttransporte;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
