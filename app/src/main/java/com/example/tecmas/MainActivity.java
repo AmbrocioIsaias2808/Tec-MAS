@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.tecmas.Menu.Section_SII.FragmentSII;
 import com.onesignal.OneSignal;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -71,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.navmenu_mapainteractivo:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMapaInteractivo()).commit();
+                break;
+            case R.id.navmenu_sii:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentSII()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
