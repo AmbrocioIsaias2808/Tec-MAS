@@ -9,15 +9,15 @@
 
 Tec-MAS pretende ser un medio de comunicación y difusión de información entre la institución educativa TecNM/ITM y su comunidad estudiantil, permitiendo ofrecer la información importante y de relevancia académica de la forma mas oportuna y rápida posible.
 
-Tec-MAS esta pensado para ser una aplicación móvil que conecte con varios servicios y brinde en su interior todo tipo de contenido relacionado a eventos, noticias e información de interés académico y necesite ser comunicado a la brevedad.
-
 -----------
 
 ### Notas de Versión:
 
-La presente versión incorpora el boceto de lo que será el apartado de transporte, donde se presentarán los mapas y horarios correspondientes a las rutas de transporte nocturno.
+La presente versión incorpora el apartado SII en donde se accede a la plataforma integral del Tecnológico de Matamoros por medio de un webview. Además se han incorporado nuevos iconos de aplicación para el proyecto (sin embargo aún no son los oficiales).
 
 ##### Notas del desarrollador y cosas por hacer:
+
+Aún no se corrigen los detalles de la versión Android-19.10.13v2 que es la que incorpora las novedades en el apartado de transporte, anexo las cosas aún por hacer:
 
 * La presente interfaz tiene un cierto retrase o lagueo en el desplazamiento entre pestañas, probablemente debido o a la carga de los mapas y/o de la forma de creación de los objetos que le dan origen. En resumen es un aspecto a resolver.
 
@@ -30,7 +30,15 @@ La presente versión incorpora el boceto de lo que será el apartado de transpor
 
 
 
-<img src="READMEFILES/Screenshot_20191015-165954.png" alt="Screenshot_20191015-165954" style="width:25%;" />
+<img src="READMEFILES/Screenshot_20191016-120725.png" alt="Screenshot_20191016-120725" style="width:50%" />
+
+<img src="READMEFILES/Screenshot_20191016-120736.png" alt="Screenshot_20191016-120736" style="width:30%;" />
+
+
+
+
+
+<img src="READMEFILES/Screenshot_20191016-120740.png" alt="Screenshot_20191016-120740" style="width:30%;" />
 
 -------
 
