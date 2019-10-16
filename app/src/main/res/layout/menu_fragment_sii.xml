@@ -4,10 +4,20 @@
     android:layout_height="match_parent">
 
 
-    <WebView
-        android:id="@+id/menu_sii_browser"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/menu_sii_SwipeRefreshLayout"
+        >
+
+        <WebView
+            android:id="@+id/menu_sii_browser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </WebView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 
     

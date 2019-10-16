@@ -31,6 +31,6 @@
 
         <item android:id="@+id/navmenu_sii"
             android:icon="@drawable/ic_menu_sii"
-            android:title="Mapa Interactivo"/>
+            android:title="SII"/>
     </group>
 </menu>
