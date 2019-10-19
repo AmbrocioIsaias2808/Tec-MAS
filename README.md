@@ -24,15 +24,15 @@ Aunque ya están resueltos los dilemas de la versión Android-19.10.13v2 aún te
 **Capturas de Pantalla:**
 
 
-<img align="center" src="READMEFILES/Screenshot_20191016-120736.png" alt="Screenshot_20191016-120736" width="30%" />
+<p align="center"><img  src="READMEFILES/Screenshot_20191016-120736.png" alt="Screenshot_20191016-120736" width="30%" /></p>
 
 
 
-<img align="center" src="READMEFILES/Screenshot_20191019-180205.png" alt="Screenshot_20191019-180205" width="30%" />
+<p align="center"><img align="center" src="READMEFILES/Screenshot_20191019-180205.png" alt="Screenshot_20191019-180205" width="30%" /></p>
 
 
 
-<img align="center" src="READMEFILES/Screenshot_20191019-180210.png" alt="Screenshot_20191019-180210" width="30%" />
+<p align="center"><img align="center" src="READMEFILES/Screenshot_20191019-180210.png" alt="Screenshot_20191019-180210" width="30%" /></p>
 
 -------
 
