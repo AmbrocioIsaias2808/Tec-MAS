@@ -6,30 +6,14 @@
     android:orientation="vertical"
     tools:context=".Menu.Seccion_Transporte.Section_Transporte_Rutas">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/Ruta"
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Ruta"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview_tabs_transporte"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
         />
-
-    <ImageView
-        android:id="@+id/Mapa_Ruta"
-        android:layout_width="match_parent"
-        android:layout_height="148dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/colorPrimary" />
-
-    <TextView
-        android:id="@+id/Ruta_hora"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
-        android:text="Hora de salida:"
-
-        />
-
 
 </FrameLayout>

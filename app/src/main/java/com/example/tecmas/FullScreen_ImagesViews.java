@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.jsibbold.zoomage.ZoomageView;
+import com.squareup.picasso.Picasso;
 
 //import com.bogdwellers.pinchtozoom.ImageMatrixTouchHandler;
 
@@ -19,8 +20,8 @@ public class FullScreen_ImagesViews extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fullscreen_images_views);
         ZoomageView mapa= (ZoomageView) findViewById(R.id.FullScreenImagesViews) ;
-        int image= getIntent().getIntExtra("imagenid",R.drawable.common_full_open_on_phone);
-        mapa.setImageResource(image);
+        String image= getIntent().getStringExtra("imagenid");
+        Picasso.get().load(image).into(mapa);
 
 
     }

@@ -4,6 +4,8 @@ import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.tecmas.FullScreen_ImagesViews;
+import com.example.tecmas.Menu.Seccion_Transporte.RecyclerAdapterTransporte;
 import com.example.tecmas.R;
 
 public class Section_Transporte_Rutas extends Fragment {
@@ -22,6 +25,7 @@ public class Section_Transporte_Rutas extends Fragment {
     ImageView mapa;
     TextView hora;
     View view;
+    RecyclerAdapterTransporte adapter;
 
     public Section_Transporte_Rutas(int nruta) {
         // Required empty public constructor
@@ -39,11 +43,11 @@ public class Section_Transporte_Rutas extends Fragment {
 
         view = inflater.inflate(R.layout.section_transporte_rutas, container, false);
 
-        ruta = (TextView) view.findViewById(R.id.Ruta);
-        mapa = (ImageView) view.findViewById(R.id.Mapa_Ruta);
-        hora = (TextView) view.findViewById(R.id.Ruta_hora);
-
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_tabs_transporte);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         setInfo();
+        recyclerView.setAdapter(adapter);
+
 
         return  view;
     }
@@ -51,7 +55,7 @@ public class Section_Transporte_Rutas extends Fragment {
     void setInfo(){
         switch (this.nruta){
             case 0:
-                ruta.setText("Ruta 1");
+                adapter = new RecyclerAdapterTransporte("Ruta 1","http://www.itmatamoros.edu.mx/wp-content/uploads/2019/02/Ruta-Tec-1-2019.jpg","10:00", getContext());
                 /*mapa.setBackgroundResource(R.drawable.mapa_ruta_1);
                 mapa.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -63,10 +67,10 @@ public class Section_Transporte_Rutas extends Fragment {
                     }
                 });*/
                 //mapa.setOnTouchListener(new ImageMatrixTouchHandler(view.getContext()));
-                hora.setText("9:00");
+
                 break;
             case 1:
-                ruta.setText("Ruta 2");
+                adapter = new RecyclerAdapterTransporte("Ruta 2","http://www.itmatamoros.edu.mx/wp-content/uploads/2019/02/Ruta-Tec-2-2019.jpg","10:00", getContext());
                 /*mapa.setBackgroundResource(R.drawable.mapa_ruta_2);
                 //mapa.setOnTouchListener(new ImageMatrixTouchHandler(view.getContext()));
                 mapa.setOnClickListener(new View.OnClickListener() {
@@ -78,10 +82,10 @@ public class Section_Transporte_Rutas extends Fragment {
 
                     }
                 });*/
-                hora.setText("9:00");
+
                 break;
             case 2:
-                ruta.setText("Ruta 3");
+                adapter = new RecyclerAdapterTransporte("Ruta 3","http://www.itmatamoros.edu.mx/wp-content/uploads/2019/02/Ruta-Tec-3-2019.jpg","10:20", getContext());
                 /*mapa.setBackgroundResource(R.drawable.mapa_ruta_3);
                 //mapa.setOnTouchListener(new ImageMatrixTouchHandler(view.getContext()));
                 mapa.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +98,7 @@ public class Section_Transporte_Rutas extends Fragment {
 
                     }
                 });*/
-                hora.setText("9:00");
+
                 break;
         }
 
