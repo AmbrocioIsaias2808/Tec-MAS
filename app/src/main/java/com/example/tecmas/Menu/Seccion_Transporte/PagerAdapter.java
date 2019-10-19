@@ -10,11 +10,17 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 public class PagerAdapter extends FragmentStatePagerAdapter {
 
     private int numeroDeTabs;
+    private Section_Transporte_Rutas[] objetos;
 
 
     public PagerAdapter(FragmentManager fm, int ntabs) {
         super(fm);
         this.numeroDeTabs=ntabs;
+        objetos= new Section_Transporte_Rutas[ntabs];
+        for (int i=0; i<ntabs;i++){
+            objetos[i] = new Section_Transporte_Rutas(i);
+        }
+
     }
 
 
@@ -22,26 +28,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-
-            case 0:
-
-                return new Section_Transporte_Rutas(position+1);
-
-
-            case 1:
-                return new Section_Transporte_Rutas(position+1);
-
-            case 2:
-                return new Section_Transporte_Rutas(position+1);
-
-            case 3:
-                return new Section_Transporte_Rutas(position+1);
-
-            default:
-                return new Section_Transporte_Rutas();
-
-        }
+        return objetos[position];
 
     }
 

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_tecnm_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".FullScreen_ImagesViews"
+            android:theme="@style/AppTheme.FullScreenImagesView"></activity>
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

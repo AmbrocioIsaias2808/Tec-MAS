@@ -9,6 +9,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.tecmas.Menu.Section_SII.FragmentSII;
 import com.onesignal.OneSignal;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()){
             case R.id.navmenu_inicio:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentInicio()).commit();
+                //Intent intent = new Intent(this, FullScreen_ImagesViews.class);
+                //startActivity(intent);
                 break;
             case R.id.navmenu_becas:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentBecas()).commit();
