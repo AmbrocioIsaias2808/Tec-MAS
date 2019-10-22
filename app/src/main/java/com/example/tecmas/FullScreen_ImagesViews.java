@@ -22,7 +22,5 @@ public class FullScreen_ImagesViews extends AppCompatActivity {
         ZoomageView mapa= (ZoomageView) findViewById(R.id.FullScreenImagesViews) ;
         String image= getIntent().getStringExtra("imagenid");
         Picasso.get().load(image).into(mapa);
-
-
     }
 }

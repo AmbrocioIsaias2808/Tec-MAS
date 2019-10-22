@@ -67,9 +67,9 @@ public class RecyclerAdapterTransporte extends RecyclerView.Adapter<RecyclerAdap
     public void onBindViewHolder(View_Holder holder, int position) {
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
-        holder.ruta.setText(Ruta);
-        TextJustification.justify(holder.ruta); //para justificar el texto
-        holder.hora.setText(Hora);
+        //holder.ruta.setText(Ruta);
+        //TextJustification.justify(holder.ruta); //para justificar el texto
+        //holder.hora.setText(Hora);
         Picasso.get().load(Mapa).into(holder.mapa);
         holder.mapa.setOnClickListener(new View.OnClickListener() {
             @Override

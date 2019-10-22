@@ -6,11 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apersonalizedlibrary.TextJustification;
+import com.example.tecmas.Menu.Section_Inicio.fragment_informacion;
 import com.example.tecmas.R;
 
 import java.util.Collections;
@@ -53,13 +57,26 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     }
 
     @Override
-    public void onBindViewHolder(View_Holder holder, int position) {
+    public void onBindViewHolder(View_Holder holder, final int position) {
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
         holder.title.setText(list.get(position).title);
         TextJustification.justify(holder.title); //para justificar el texto
        // holder.description.setText(list.get(position).description);
         holder.imageView.setBackgroundResource(list.get(position).imageId);
+
+        holder.cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast t = Toast.makeText(context,"Funciona",Toast.LENGTH_LONG);
+                //t.show();
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                Fragment myFragment = new fragment_informacion(list.get(position).articleID);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
+
+
+            }
+        });
 
 
         //animate(holder);

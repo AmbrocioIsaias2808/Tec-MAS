@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Ruta"
+        android:text=""
         />
 
     <com.jsibbold.zoomage.ZoomageView
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Hora de salida:"
+        android:text=""
 
         />
 
