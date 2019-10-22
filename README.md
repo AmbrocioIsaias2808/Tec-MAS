@@ -30,7 +30,7 @@ La presente versión incorpora el boceto de lo que será el apartado de transpor
 
 
 
-<img src="READMEFILES/Screenshot_20191015-165954.png" alt="Screenshot_20191015-165954" style="width:25%;" />
+<p align="center"><img src="READMEFILES/Screenshot_20191015-165954.png" alt="Screenshot_20191015-165954" width="25%" /></p>
 
 -------
 
