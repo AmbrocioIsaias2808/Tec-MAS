@@ -82,6 +82,7 @@ public class FragmentSII extends Fragment {
                 return false;
             }
         });
+        RefreshLayout.setRefreshing(true);
         //Cargo la url:
         browser.loadUrl("http://mictlantecuhtli.itmatamoros.edu.mx");
 
@@ -97,6 +98,7 @@ public class FragmentSII extends Fragment {
 
 
         );
+
 
 
         return vista;
