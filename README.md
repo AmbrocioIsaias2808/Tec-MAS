@@ -13,13 +13,14 @@ Tec-MAS pretende ser un medio de comunicación y difusión de información entre
 
 ### Notas de Versión:
 
-La presente versión resuelve el problema de lag entre pestañas del apartado de transporte. Al ultimo el problema era generado por el peso de las imágenes que eran cargadas el ImageView. Al ultimo se recurrió al uso de la librería Picasso para la carga de imágenes, de esta manera logramos cargar las imágenes desde internet en resoluciones aceptables de buena calidad y con menos peso y esfuerzo de renderizado.
+La presente versión incorpora una nueva característica en el apartado de inicio. Consiste en la habilidad de poder dar click sobre las tarjetas de eventos para desplegar una pantalla dedicada a la lectura del contenido informativo (**sección del articulo**)
 
-A su vez se ha incorporado una nueva función que esperamos funcione para el resto de los elementos de imagen. Consiste en un visor de imagen, el cual despliega la imagen pinchada en un activity independiente, el cuál permite hacer zoom.
+A su vez el fragment de **sección del articulo** o de información del mismo despliega el contenido en un webview basandose de tecnologías web para el despliegue formateado del texto y contenido.
 
 ##### Notas del desarrollador y cosas por hacer:
 
-Aunque ya están resueltos los dilemas de la versión Android-19.10.13v2 aún tengo el deseo de ver la posibilidad de cargar los mapas con google maps para una vista mas interactiva.
+* Aunque ya están resueltos los dilemas de la versión Android-19.10.13v2 aún tengo el deseo de ver la posibilidad de cargar los mapas con google maps para una vista mas interactiva.
+* La versión Android 19.10.22-(Inicio-Apartado-Informacion) aún presenta algunos bus en el fragmento de **sección del articulo**  (los archivos relacionados son *fragment_información*). El detalle consiste en que no es posible abrir por el momento urls agregadas en el contenido o ir a links externos, se presume de falta de permisos y/o alguna funcionalidad faltante. Este **apartado requiere revisión**.
 
 **Capturas de Pantalla:**
 
@@ -28,11 +29,11 @@ Aunque ya están resueltos los dilemas de la versión Android-19.10.13v2 aún te
 
 
 
-<p align="center"><img align="center" src="READMEFILES/Screenshot_20191019-180205.png" alt="Screenshot_20191019-180205" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/Screenshot_20191022-123514.png" alt="Screenshot_20191016-120736" width="30%" /></p>
 
 
 
-<p align="center"><img align="center" src="READMEFILES/Screenshot_20191019-180210.png" alt="Screenshot_20191019-180210" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/Screenshot_20191022-123508.png" alt="Screenshot_20191016-120736" width="30%" /></p>
 
 -------
 
