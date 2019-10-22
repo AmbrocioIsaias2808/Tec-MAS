@@ -21,15 +21,15 @@ Además esta versión incluye además un borrador correspondiente al diseño del
 
 **Capturas de Pantalla:**
 
-<p align="center"><img src="READMEFILES/CapturasDeVersion1.png" alt="CapturasDeVersion1" style="width:25%;" /></p>
+<p align="center"><img src="READMEFILES/CapturasDeVersion1.png" alt="CapturasDeVersion1" width="25%" /></p>
 
 
 
-<p align="center"><img src="READMEFILES/CapturasDeVersion3.png" alt="CapturasDeVersion3" style="width:25%;" /></p>
+<p align="center"><img src="READMEFILES/CapturasDeVersion3.png" alt="CapturasDeVersion3" width="25%" /></p>
 
 
 
-<p align="center"><img src="READMEFILES/Screenshot_20191008-161743.png" alt="Screenshot_20191008-161743" style="width:25%;" /></p>
+<p align="center"><img src="READMEFILES/Screenshot_20191008-161743.png" alt="Screenshot_20191008-161743" width="25%" /></p>
 
 -------
 
