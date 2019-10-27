@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.apersonalizedlibrary.TextJustification;
 import com.example.tecmas.Menu.Section_Inicio.fragment_informacion;
 import com.example.tecmas.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.Collections;
 import java.util.List;
@@ -61,9 +62,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
         holder.title.setText(list.get(position).title);
-        TextJustification.justify(holder.title); //para justificar el texto
+        //TextJustification.justify(holder.title); //para justificar el texto
        // holder.description.setText(list.get(position).description);
-        holder.imageView.setBackgroundResource(list.get(position).imageId);
+        Picasso.get().load(list.get(position).imageId).into(holder.imageView);
 
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +99,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     public void insert(int position, InfoObjects data) {
         list.add(position, data);
         notifyItemInserted(position);
+
+    }
+
+    public void clear(){
+        list.clear();
     }
 
     // Remove a RecyclerView item containing a specified InfoObjects object

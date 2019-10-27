@@ -1,4 +1,4 @@
-package com.example.tecmas.Menu;
+package com.example.tecmas.Menu.Section_Becas;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

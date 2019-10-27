@@ -7,14 +7,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.tecmas.Menu.Section_Inicio.fragment_informacion;
 import com.example.tecmas.Menu.Section_SII.FragmentSII;
 import com.onesignal.OneSignal;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.tecmas.Menu.FragmentBecas;
+import com.example.tecmas.Menu.Section_Becas.FragmentBecas;
 import com.example.tecmas.Menu.FragmentCalendario;
 import com.example.tecmas.Menu.FragmentEmergencias;
 import com.example.tecmas.Menu.Section_Inicio.FragmentInicio;
