@@ -1,4 +1,4 @@
-package com.example.tecmas.Menu.Section_Becas;
+package com.example.tecmas.Menu.Seccion_Emergencias;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -29,9 +29,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentBecas extends Fragment {
+public class FragmentEmergencias extends Fragment {
 
-    String URL_DATA= "https://wordpresspruebas210919.000webhostapp.com/wp-json/wp/v2/posts?categories=3";
+
+    String URL_DATA= "https://wordpresspruebas210919.000webhostapp.com/wp-json/wp/v2/posts?categories=4";
     RecyclerAdapter adapter;
     RecyclerView recyclerView;
     private List<InfoObjects> data;
@@ -40,7 +41,7 @@ public class FragmentBecas extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View vista = inflater.inflate(R.layout.menu_fragment_becas, container, false);
+        View vista = inflater.inflate(R.layout.menu_fragment_emergencias, container, false);
 
         data = new ArrayList<>();
         fill_with_data();

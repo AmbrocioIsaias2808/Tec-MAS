@@ -6,15 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.apersonalizedlibrary.TextJustification;
-import com.example.tecmas.Menu.Section_Inicio.fragment_informacion;
+import com.example.tecmas.Menu.InformationViewer;
 import com.example.tecmas.R;
 import com.squareup.picasso.Picasso;
 
@@ -72,7 +70,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
                 //Toast t = Toast.makeText(context,"Funciona",Toast.LENGTH_LONG);
                 //t.show();
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                Fragment myFragment = new fragment_informacion(list.get(position).articleID);
+                Fragment myFragment = new InformationViewer(list.get(position).articleID);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
 
 

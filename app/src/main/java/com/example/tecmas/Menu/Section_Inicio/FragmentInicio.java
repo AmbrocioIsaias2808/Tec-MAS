@@ -167,6 +167,7 @@ public class FragmentInicio extends Fragment {
                           }
 
                             adapter = new RecyclerAdapter(data, getContext());
+
                             recyclerView.setAdapter(adapter);
 
                         } catch (JSONException e) {

@@ -1,4 +1,5 @@
-package com.example.tecmas.Menu.Section_SII;
+
+package com.example.tecmas.Menu.Seccion_Calendario;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -15,37 +16,35 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.tecmas.R;
 
-public class FragmentSII extends Fragment {
+public class FragmentCalendario extends Fragment {
+
 
     WebView browser;
-    SwipeRefreshLayout RefreshLayout;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View vista = inflater.inflate(R.layout.menu_fragment_sii, container, false);
+        View vista = inflater.inflate(R.layout.menu_fragment_calendario, container, false);
 
         //Creo el swipeview y lo enlazo con su vista
-        RefreshLayout=(SwipeRefreshLayout) vista.findViewById(R.id.menu_sii_SwipeRefreshLayout);
 
         //Creo el webview y lo enlazo con su vista
-        browser= (WebView) vista.findViewById(R.id.menu_sii_browser);
+        browser= (WebView) vista.findViewById(R.id.menu_calendarViewer_browser);
         browser.setWebViewClient(new WebViewClient(){
 
             //Desactivamos la animación del refreshview cuando se termine de cargar la pagina
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(browser, url);
-                RefreshLayout.setRefreshing(false);
             }
         });
         //Habilito el uso de javascript
         browser.getSettings().setJavaScriptEnabled(true);
 
         //Modifico el zoom para que se ajuste al movil
-        browser.getSettings().setLoadWithOverviewMode(true);
-        browser.getSettings().setUseWideViewPort(true);
+       // browser.getSettings().setLoadWithOverviewMode(true);
+        //browser.getSettings().setUseWideViewPort(true);
         //Habilito el zoom para modificar con gestos
         browser.getSettings().setSupportZoom(true);
 
@@ -83,24 +82,8 @@ public class FragmentSII extends Fragment {
             }
         });
 
-
-        RefreshLayout.setRefreshing(true);
         //Cargo la url:
-        browser.loadUrl("http://mictlantecuhtli.itmatamoros.edu.mx");
-
-        //Habilito el refresh del sitio cuando se "jala el webview hacia abajo"
-        RefreshLayout.setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        browser.loadUrl( "javascript:window.location.reload( true )" );
-                    }
-
-                }
-
-
-        );
-
+        browser.loadUrl("https://docs.google.com/gview?embedded=true&url=http://www.itmatamoros.edu.mx/wp-content/themes/tecnologico/pdf/Calendario_agosto_diciembre_2019");
 
 
         return vista;

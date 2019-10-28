@@ -1,4 +1,4 @@
-package com.example.tecmas.Menu.Section_Inicio;
+package com.example.tecmas.Menu;
 
 
 import android.app.ProgressDialog;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,31 +20,27 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.tecmas.InfoCards.InfoObjects;
-import com.example.tecmas.InfoCards.RecyclerAdapter;
 import com.example.tecmas.R;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class fragment_informacion extends Fragment {
+public class InformationViewer extends Fragment {
 
     private int ID;
     public WebView browser;
     public String URL= "https://wordpresspruebas210919.000webhostapp.com/wp-json/wp/v2/posts/";
     public String data;
-    public fragment_informacion() {
+    public InformationViewer() {
         // Required empty public constructor
     }
 
-    public fragment_informacion(int ID) {
+    public InformationViewer(int ID) {
         // Required empty public constructor
         this.URL=this.URL+String.valueOf(ID);
-        System.out.println(this.URL);
     }
 
 
@@ -52,7 +49,7 @@ public class fragment_informacion extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_informacion, container, false);
+        View view = inflater.inflate(R.layout.informationviever, container, false);
 
         browser= (WebView) view.findViewById(R.id.info_browser);
         browser.setWebViewClient(new WebViewClient());
@@ -87,11 +84,55 @@ public class fragment_informacion extends Fragment {
 
 
                                 data=content.getString("rendered");
-                                System.out.println(data);
                                 browser.getSettings().setLoadWithOverviewMode(true);
                                 browser.getSettings().setUseWideViewPort(true);
 
-                                browser.loadData(data, "text/html; charset=utf-8", "UTF-8");
+                            browser.getSettings().setSupportZoom(true);
+
+                            browser.getSettings().setBuiltInZoomControls(true);
+
+                            //Modifico el comportamiento del boton regresar del movil para que regrese a la pagina
+                            //anterior del webview y no a una activity anterior.
+                            browser.setOnKeyListener(new View.OnKeyListener()
+                            {
+
+                                @Override
+                                public boolean onKey(View v, int keyCode, KeyEvent event)
+                                {
+                                    if(event.getAction() == KeyEvent.ACTION_DOWN)
+                                    {
+                                        WebView webView = (WebView) v;
+
+                                        switch(keyCode)
+                                        {
+                                            case KeyEvent.KEYCODE_BACK:
+                                                if(webView.canGoBack())
+                                                {
+                                                    webView.goBack();
+                                                    return true;
+                                                }
+                                                break;
+                                        }
+                                    }
+
+                                    return false;
+                                }
+                            });
+
+
+
+
+                            String website="<html><head><link rel='stylesheet' type='text/css' href='estilos.css'/></head><body>"+data+"</body></html>";
+
+
+
+
+                            browser.loadDataWithBaseURL("file:///android_asset/",website, "text/html; charset=utf-8", "UTF-8",null);
+
+
+
+
+
 
 
 

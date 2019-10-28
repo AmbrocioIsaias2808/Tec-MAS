@@ -14,8 +14,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.tecmas.Menu.Section_Becas.FragmentBecas;
-import com.example.tecmas.Menu.FragmentCalendario;
-import com.example.tecmas.Menu.FragmentEmergencias;
+import com.example.tecmas.Menu.Seccion_Calendario.FragmentCalendario;
+import com.example.tecmas.Menu.Seccion_Emergencias.FragmentEmergencias;
 import com.example.tecmas.Menu.Section_Inicio.FragmentInicio;
 import com.example.tecmas.Menu.FragmentMapaInteractivo;
 import com.example.tecmas.Menu.Seccion_Transporte.Fragmenttransporte;
