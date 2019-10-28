@@ -47,3 +47,10 @@ El desarrollo del apartado mapa interactivo corresponde a un entorno de realidad
 
 
 **Aclaraciones:** *el presente repositorio al día de hoy no tiene ni guarda ninguna relación directa con el TecNM, simplemente es una propuesta de desarrollo hecha con motivo académico para las materias de Taller de Investigación 1 y Taller de Investigación 2 vistas en la carga curricular de la carrera de Ing. En Sistemas Computacionales.*
+
+
+
+**Descargas:** 
+
+<p>La apk de la aplicación al momento esta disponible <a href="https://github.com/AmbrocioIsaias2808/Tec-MAS/blob/Android-19.10.23.03-(Inicio-Apartado-Informaci%C3%B3n)/READMEFILES/Tec-MAS2.apk?raw=true">aquí</a></p>
+
