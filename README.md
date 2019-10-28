@@ -13,28 +13,29 @@ Tec-MAS pretende ser un medio de comunicación y difusión de información entre
 
 ### Notas de Versión:
 
-La presente versión incorpora una nueva característica en el apartado de inicio. Consiste en la habilidad de poder dar click sobre las tarjetas de eventos para desplegar una pantalla dedicada a la lectura del contenido informativo (**sección del articulo**)
+La presente versión trae ciertas mejoras desde el lado del backend es así que se ha implementado:
 
-A su vez el fragment de **sección del articulo** o de información del mismo despliega el contenido en un webview basandose de tecnologías web para el despliegue formateado del texto y contenido.
+- La instalación de plugins del lado del servidor de pruebas (El CMS usado es wordpress):
+  -  	Se instalo Wordpress Rest API v2
+  -  	Better REST API Featured Images
+- Con lo anterior nuestra aplicación ya puede servirse información de entradas directamente desde el servidor por medio de cadenas tipo JSON.
+- Se ha implementado un visor de pdfs para visualizar el calendario escolar en formato digital (Me gustaría hacer algo mas vistoso pero por ahora esta bien xd ).
 
 ##### Notas del desarrollador y cosas por hacer:
 
-* Aunque ya están resueltos los dilemas de la versión Android-19.10.13v2 aún tengo el deseo de ver la posibilidad de cargar los mapas con google maps para una vista mas interactiva.
-* La versión Android 19.10.22-(Inicio-Apartado-Informacion) aún presenta algunos bus en el fragmento de **sección del articulo**  (los archivos relacionados son *fragment_información*). El detalle consiste en que no es posible abrir por el momento urls agregadas en el contenido o ir a links externos, se presume de falta de permisos y/o alguna funcionalidad faltante. Este **apartado requiere revisión**.
+* El diseño: no me agrada espero mejorarlo.
+* Los webviews de las secciones de inicio, emergencias y becas tienen un ligero bug parcheado de forma rápida, el problema consiste en que al navegar atreves de hipervínculos y tratar de regresar a la pagina anterior por retroceso, esta carga en blanco. Por ahora se ha impedido esta función, todo link abierto es redireccionado por ahora al navegador por defecto del teléfono.
+* Implementar una base de datos en SQLite donde almacenar los datos recurrentes. La aplicación carga lentamente los elementos en los apartados de inicio, becas y emergencias debido a la necesidad de pedir los elementos por internet. Es por ello que se pretende agilizar la carga al solicitar los datos recurrentes localmente y en caso de necesitar información extra será necesario la petición al servidor.
 
 **Capturas de Pantalla:**
 
-
-<p align="center"><img  src="READMEFILES/Screenshot_20191016-120736.png" alt="Screenshot_20191016-120736" width="30%" /></p>
-
-
-
-<p align="center"><img  src="READMEFILES/Screenshot_20191022-123514.png" alt="Screenshot_20191016-120736" width="30%" /></p>
-
-
-
-<p align="center"><img  src="READMEFILES/Screenshot_20191022-123508.png" alt="Screenshot_20191016-120736" width="30%" /></p>
-
+<p align="center"><img  src="READMEFILES/1.png" alt="Screenshot_20191016-120736" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/2.png" alt="Screenshot_20191016-120736" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/3.png" alt="Screenshot_20191016-120736" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/4.png" alt="Screenshot_20191016-120736" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/5.png" alt="Screenshot_20191016-120736" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/6.png" alt="Screenshot_20191016-120736" width="30%" /></p>
+<p align="center"><img  src="READMEFILES/7.png" alt="Screenshot_20191016-120736" width="30%" /></p>
 -------
 
 #### Mapa Interactivo:
