@@ -2,6 +2,8 @@ package com.example.tecmas.Menu;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -34,6 +36,7 @@ public class InformationViewer extends Fragment {
     public WebView browser;
     public String URL= "https://wordpresspruebas210919.000webhostapp.com/wp-json/wp/v2/posts/";
     public String data;
+    public String website;
     public InformationViewer() {
         // Required empty public constructor
     }
@@ -52,7 +55,19 @@ public class InformationViewer extends Fragment {
         View view = inflater.inflate(R.layout.informationviever, container, false);
 
         browser= (WebView) view.findViewById(R.id.info_browser);
-        browser.setWebViewClient(new WebViewClient());
+        browser.setWebViewClient(new WebViewClient(){
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url != null && (url.startsWith("http://") || url.startsWith("https://"))) {
+                    view.getContext().startActivity(
+                            new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
 
         browser.getSettings().setJavaScriptEnabled(true);
 
@@ -84,8 +99,8 @@ public class InformationViewer extends Fragment {
 
 
                                 data=content.getString("rendered");
-                                browser.getSettings().setLoadWithOverviewMode(true);
-                                browser.getSettings().setUseWideViewPort(true);
+                            //browser.getSettings().setLoadWithOverviewMode(true);
+                            // browser.getSettings().setUseWideViewPort(true);
 
                             browser.getSettings().setSupportZoom(true);
 
@@ -108,7 +123,11 @@ public class InformationViewer extends Fragment {
                                             case KeyEvent.KEYCODE_BACK:
                                                 if(webView.canGoBack())
                                                 {
+
                                                     webView.goBack();
+                                                    Toast t = Toast.makeText(getContext(),webView.getUrl().toString(),Toast.LENGTH_LONG);
+                                                    t.show();
+
                                                     return true;
                                                 }
                                                 break;
@@ -122,13 +141,17 @@ public class InformationViewer extends Fragment {
 
 
 
-                            String website="<html><head><link rel='stylesheet' type='text/css' href='estilos.css'/></head><body>"+data+"</body></html>";
+                            website="<html><head><link rel='stylesheet' type='text/css' href='file:///android_asset/estilos.css'/></head><body>"+data+"</body></html>";
 
 
 
 
                             browser.loadDataWithBaseURL("file:///android_asset/",website, "text/html; charset=utf-8", "UTF-8",null);
+                            Toast t = Toast.makeText(getContext(),browser.getUrl().toString(),Toast.LENGTH_LONG);
+                            t.show();
+                            System.out.println("\n\n\n\n\n\n"+browser.getUrl().toString());
 
+                            //browser.loadData(website, "text/html; charset=utf-8", "UTF-8");
 
 
 
