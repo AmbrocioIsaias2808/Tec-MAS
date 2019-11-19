@@ -11,21 +11,13 @@ Tec-MAS pretende ser un medio de comunicación y difusión de información entre
 
 -----------
 
-### Notas de Versión:
+### Notas del Desarrollador:
 
-La presente versión trae ciertas mejoras desde el lado del backend es así que se ha implementado:
+El presente desarrollo ha terminado para esta versión, el desarrollo continuará pero hemos mudado los esfuerzos a desarrollar la aplicación en Flutter, esto como medida para producir en paralelo la versión tanto para IOS como para Android.
 
-- La instalación de plugins del lado del servidor de pruebas (El CMS usado es wordpress):
-  -  	Se instalo Wordpress Rest API v2
-  -  	Better REST API Featured Images
-- Con lo anterior nuestra aplicación ya puede servirse información de entradas directamente desde el servidor por medio de cadenas tipo JSON.
-- Se ha implementado un visor de pdfs para visualizar el calendario escolar en formato digital (Me gustaría hacer algo mas vistoso pero por ahora esta bien xd ).
+Si deseas seguir el desarrollo de este aplicativo te recomiendo dar una vuelta por este repositorio:
 
-##### Notas del desarrollador y cosas por hacer:
-
-* El diseño: no me agrada espero mejorarlo.
-* Los webviews de las secciones de inicio, emergencias y becas tienen un ligero bug parcheado de forma rápida, el problema consiste en que al navegar atreves de hipervínculos y tratar de regresar a la pagina anterior por retroceso, esta carga en blanco. Por ahora se ha impedido esta función, todo link abierto es redireccionado por ahora al navegador por defecto del teléfono.
-* Implementar una base de datos en SQLite donde almacenar los datos recurrentes. La aplicación carga lentamente los elementos en los apartados de inicio, becas y emergencias debido a la necesidad de pedir los elementos por internet. Es por ello que se pretende agilizar la carga al solicitar los datos recurrentes localmente y en caso de necesitar información extra será necesario la petición al servidor.
+<a href="https://github.com/AmbrocioIsaias2808/Tec-MAS/tree/master" target="_blanck">Repositorio en flutter</a>
 
 **Capturas de Pantalla:**
 
@@ -53,4 +45,3 @@ El desarrollo del apartado mapa interactivo corresponde a un entorno de realidad
 **Descargas:** 
 
 <p>La apk de la aplicación al momento esta disponible <a href="https://github.com/AmbrocioIsaias2808/Tec-MAS/blob/Android-19.10.23.03-(Inicio-Apartado-Informaci%C3%B3n)/READMEFILES/Tec-MAS2.apk?raw=true">aquí</a></p>
-
