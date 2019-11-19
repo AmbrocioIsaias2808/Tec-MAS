@@ -17,7 +17,7 @@ El presente desarrollo ha terminado para esta versi√≥n, el desarrollo continuar√
 
 Si deseas seguir el desarrollo de este aplicativo te recomiendo dar una vuelta por este repositorio:
 
-<a href="https://github.com/AmbrocioIsaias2808/Tec-MAS/tree/master" target="_blanck">Repositorio en flutter</a>
+<a href="https://github.com/AmbrocioIsaias2808/Tec-MAS-Flutter" target="_blanck">Repositorio en flutter</a>
 
 **Capturas de Pantalla:**
 
